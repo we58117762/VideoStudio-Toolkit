@@ -1,0 +1,27 @@
+[
+  {
+    "name": "python",
+    "parts": [
+      "python.zip.001",
+      "python.zip.002",
+      "python.zip.003"
+    ],
+    "sha256": "0a7ec0a408aff3d429fd2ac9e02cdce132aa746c05fcc768d4c9edb713ec8915"
+  },
+  {
+    "name": "node",
+    "parts": [
+      "node.zip.001"
+    ],
+    "sha256": "57a7dcf888637305c2381257eb5dd4fe8d0a70af5a22fab475b593b27b3f8520"
+  },
+  {
+    "name": "ffmpeg",
+    "parts": [
+      "ffmpeg.zip.001",
+      "ffmpeg.zip.002",
+      "ffmpeg.zip.003"
+    ],
+    "sha256": "459d693283a689512cd98f684b9354e92c7976f863ff384551dab0ee2d977a86"
+  }
+]

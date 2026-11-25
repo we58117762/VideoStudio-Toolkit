@@ -7,14 +7,14 @@
 声音技能使用工作室独立的 Python。PowerShell 中可以直接运行：
 
 ```powershell
-.\.venv\Scripts\python.exe .\.agents\skills\procedural-audio\scripts\audio_kit.py doctor
-.\.venv\Scripts\python.exe .\.agents\skills\sfx-sources\scripts\sfx.py --help
+.\tools\python\python.exe .\.agents\skills\procedural-audio\scripts\audio_kit.py doctor
+.\tools\python\python.exe .\.agents\skills\sfx-sources\scripts\sfx.py --help
 ```
 
 混音和媒体检查使用 `tools/ffmpeg/bin/ffmpeg.exe` 和 `tools/ffmpeg/bin/ffprobe.exe`。需要在当前 PowerShell 会话中按命令名调用工具时，先在工作室根目录运行：
 
 ```powershell
-$env:Path = "$PWD\.venv\Scripts;$PWD\tools\ffmpeg\bin;$env:Path"
+$env:Path = "$PWD\tools\python;$PWD\tools\node\bin;$PWD\tools\ffmpeg\bin;$env:Path"
 ```
 
 Surge XT、sfizz 和采样乐器的配置见 `.agents/skills/procedural-audio/references/setup.md`。基础扫频、低频冲击声和混音可直接在本地运行。

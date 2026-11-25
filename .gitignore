@@ -21,3 +21,6 @@ node_modules/
 /.agents/skills/ruler-progress-render
 /.agents/skills/threejs-earth-render
 /.agents/skills/wechat-2d-render
+/tools/python/
+/tools/node/
+/vibe-motion/create-vibe-motion/packages/create-vibe-motion/template/

@@ -4,25 +4,33 @@
 
 ## 在 Windows 上恢复工作室
 
-准备 Git 和 Node.js，在 PowerShell 中运行：
+在装有 Git 的 Windows x64 电脑上，用 PowerShell 运行：
 
 ```powershell
-git clone --recurse-submodules https://github.com/we58117762/video-studio.git VideoStudio-Leo
+git clone https://github.com/we58117762/video-studio.git VideoStudio-Leo
 cd VideoStudio-Leo
 .\restore-studio.ps1
 ```
 
-脚本恢复四个上游仓库的锁定版本、工作室内的技能目录链接和本地 2D 模板。然后以这个目录为项目根目录打开 Codex。
+一次普通克隆即可取得四个动效项目的全部版本化文件。恢复脚本校验仓库内的运行包，解压 Python 3.12.14、声音依赖、Node.js 24.22.3、pnpm 11.25.0、FFmpeg 及 FFprobe，然后创建技能目录链接并准备本地 2D 模板。克隆完成后，恢复过程可离线运行。以这个目录为项目根目录打开 Codex 即可使用。
+
+## 动效项目来源
+
+| 本仓库目录 | 收录时的上游版本 |
+| --- | --- |
+| [vibe-motion/create-vibe-motion](vibe-motion/create-vibe-motion) | [2657ae9](https://github.com/vibe-motion/create-vibe-motion/commit/2657ae9abadb89714bdabf0d3aef210e60ce1223) |
+| [vibe-motion/create-vibe-motion-3d](vibe-motion/create-vibe-motion-3d) | [b88aa99](https://github.com/vibe-motion/create-vibe-motion-3d/commit/b88aa9999ab37b6202b5d7370a91e85ded0e1919) |
+| [vibe-motion/auto-motion](vibe-motion/auto-motion) | [17ead62](https://github.com/vibe-motion/auto-motion/commit/17ead629d010f7e5495f645d46fafd6876482c32) |
+| [vibe-motion/skills](vibe-motion/skills) | [f558ec4](https://github.com/vibe-motion/skills/commit/f558ec411484b7b20893dff0a1d4408dd386044c) |
 
 ## 声音工具
 
-三个声音技能来自 [sxhzju/sound](https://github.com/sxhzju/sound)，源码在 `.agents/skills`。在新电脑上可用 Python 3.12 创建本地环境：
+三个声音技能来自 [sxhzju/sound](https://github.com/sxhzju/sound)，源码在 `.agents/skills`。可直接使用随仓库恢复的 Python：
 
 ```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r .agents/skills/procedural-audio/requirements.txt curl_cffi
+.\tools\python\python.exe .\.agents\skills\procedural-audio\scripts\audio_kit.py doctor
 ```
 
-将 Windows 版的 `ffmpeg.exe` 和 `ffprobe.exe` 放入 `tools/ffmpeg/bin/`。可从 [FFmpeg 下载页](https://ffmpeg.org/download.html) 选择 Windows 构建。可选乐器和采样库的配置见 [声音技能安装指南](.agents/skills/procedural-audio/references/setup.md)。
+运行包分卷位于 `runtime-win-x64/`，恢复后 FFmpeg 与 FFprobe 位于 `tools/ffmpeg/bin/`。联网素材检索需要访问相应网站。新建动效工程首次渲染按项目说明安装依赖和浏览器。可选乐器和采样库的配置见 [声音技能安装指南](.agents/skills/procedural-audio/references/setup.md)。Codex 与 Claude Code 使用者在各自电脑登录。
 
 工作室的目录和工具用法见 [AGENTS.md](AGENTS.md)。
