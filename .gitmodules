@@ -1,0 +1,12 @@
+[submodule "vibe-motion/auto-motion"]
+	path = vibe-motion/auto-motion
+	url = https://github.com/vibe-motion/auto-motion.git
+[submodule "vibe-motion/create-vibe-motion"]
+	path = vibe-motion/create-vibe-motion
+	url = https://github.com/vibe-motion/create-vibe-motion.git
+[submodule "vibe-motion/create-vibe-motion-3d"]
+	path = vibe-motion/create-vibe-motion-3d
+	url = https://github.com/vibe-motion/create-vibe-motion-3d.git
+[submodule "vibe-motion/skills"]
+	path = vibe-motion/skills
+	url = https://github.com/vibe-motion/skills.git
