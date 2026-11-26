@@ -2,6 +2,8 @@
 
 VideoStudio 的制作工具仓库。包含三个声音技能、Vibe Motion 动效技能合集、2D 和 3D 脚手架，以及字幕成片工作流。
 
+**AI 接入入口：**先读 [AGENTS.md](AGENTS.md)，按 [BOOTSTRAP.md](BOOTSTRAP.md) 恢复工具上下文；具体视频的进度在对应项目仓库中。Gemini CLI 通过 [GEMINI.md](GEMINI.md) 使用同一份约定。
+
 工作室入口是 [VideoStudio](https://github.com/we58117762/VideoStudio)（私有仓库，需相应访问权限）。在那里发起新项目，由 `project-init` 建立独立项目仓库；实际制作在项目仓库中开展，按需使用这里的工具。主仓库、工具库与项目仓库可以在本地工作空间中平级存放，通过 README 关联。
 
 ## 在 Mac 上按需使用

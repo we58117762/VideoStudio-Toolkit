@@ -2,6 +2,8 @@
 
 这里是制作工具仓库。工作室入口为 [VideoStudio](https://github.com/we58117762/VideoStudio)（私有，需访问权限）；新项目从主仓库的 `project-init` 发起，正式制作在独立项目仓库中进行。以下源码路径均相对于 Toolkit 根目录。
 
+新对话或上下文不完整时，先读 [BOOTSTRAP.md](BOOTSTRAP.md)，确认本轮是在维护工具还是从具体视频项目调用工具，再继续相关任务。
+
 ## 从项目调用
 
 - 先确认当前视频项目目录及 Toolkit 的真实本地位置。平级布局下，Toolkit 通常是项目旁的 `../VideoStudio-Toolkit`；路径不符时查找已有位置，避免重复克隆。
